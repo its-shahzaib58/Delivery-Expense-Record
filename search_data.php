@@ -30,9 +30,9 @@ if($getData->num_rows > 0)
       <td class="totalReceiveable">'.$data['total_exp'].'</td>
       <td>'.$data['given_amount'].'</td>
       <td>'.$data['recevieable_amount'].'</td>
-      <td class="text-center"><a href="print_data.php?id='.$data['id'].'" target="_blank"><button class="btn btn-primary btn-sm mb-1"><i class="bi bi-eye-fill"></i></button></a>
-      <button class="btn btn-success btn-sm mb-1" onclick="handleEdit('.$data['id'].')"><i class="bi bi-pencil-fill"></i></button>
-      <button class="btn btn-danger btn-sm mb-1" onclick="handleDelete('.$data['id'].')"><i class="bi bi-trash-fill"></i></button></td>
+      <td class="text-center"><a href="print_data.php?id='.$data['id'].'" target="_blank"><button class="btn btn-link text-primary btn-sm mb-1"><i class="bi bi-eye-fill"></i></button></a>
+      <button class="btn btn-link text-success btn-sm mb-1" onclick="handleEdit('.$data['id'].')"><i class="bi bi-pencil-square"></i></button>
+      <button class="btn btn-link text-danger btn-sm mb-1" onclick="handleDelete('.$data['id'].')"><i class="bi bi-trash-fill"></i></button></td>
     </tr>
       ';
   }

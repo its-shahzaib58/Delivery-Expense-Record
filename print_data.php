@@ -12,7 +12,7 @@ $data = $conn->query($query);
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Driver Expense Record</title>
+    <title>Delivery Transportation Expensive v2.0</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="print.css" media="print">
@@ -23,7 +23,7 @@ $data = $conn->query($query);
         <div class="container-fluid">
           <div class="col-12 p-3 my-2">
             <div class="row">
-              <h1 class="text-center py-3"><u>Delivery Transportation Expensive</u></h1>
+              <h1 class="text-center py-3"><u>Delivery Transportation Expenses</u></h1>
               <?php
               foreach($data as $value)
               {
@@ -73,7 +73,7 @@ $data = $conn->query($query);
         </main>
         <footer class="py-2">
         <button onclick="window.print()" class="btn btn-primary w-50 offset-3" id="print-btn">Print</button>
-          <p class="text-center "><b>Transportation <img src="img/icon.png" class="img-fluid" width="20px"/> Expense &copy; Developed by M.Shahzaib Ramzan</b></p>
+          <p class="text-center "><b>Delivery Transportation <img src="img/icon.png" class="img-fluid" width="20px"/> Expenses v2.0 &copy; Developed by M.Shahzaib Ramzan</b></p>
         </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="jquery.js"></script>

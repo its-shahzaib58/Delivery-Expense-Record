@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Delivery Expense Record</title>
+    <title>Delivery Transportation Expensive v2.0</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" href="img/icon.png">
@@ -21,13 +21,13 @@
       min-height: 50vh;
     }
   </style>
-  <body>
+  <body class="bg-dark">
 
 <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header bg-danger">
+              <div class="modal-header bg-primary text-light">
                 <h5 class="modal-title" id="exampleModalLabel">Receivable Amount</h5>
               </div>
               <div class="modal-body">
@@ -37,7 +37,7 @@
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-warning" onclick="handleUpdate()">Save changes</button>
+                <button type="button" class="btn btn-primary" onclick="handleUpdate()">Save changes</button>
               </div>
             </div>
           </div>
@@ -47,10 +47,10 @@
 
             </div>
             <div class="row">
-                <div class="col-lg-4 my-2">
-                    <div class="card p-2 ">
-                        <div class="card-header bg-danger text-light">
-                            <span>Enter Record</span>
+                <div class="col-lg-3 my-2">
+                    <div class="card p-2 bg-secondary">
+                        <div class="card-header bg-primary text-light">
+                            <span class="fw-bold">Enter Details</span>
                         </div>
                         <div class="card-body">
                             <form onsubmit="hundleSubmit()" method="POST">
@@ -106,56 +106,57 @@
                                     <span class="input-group-text"><b>Receivable Amount:</b></span>
                                     <input type="number" id="receivableAmount"  class="form-control"  disabled>
                                   </div>
-                                  <button class="btn btn-warning w-100">Add Record</button>
+                                  <button class="btn btn-primary w-100">Add Record</button>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 my-2">
-                    <div class="card p-2 ">
-                        <div class="card-header bg-danger text-light">
-                            <span>All Record</span>
+                <div class="col-lg-9 my-2">
+                    <div class="card p-2 bg-secondary" style="height:830px">
+                        <div class="card-header bg-primary text-light fw-bold">
+                            <span >All Record</span>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body ">
                           <div class="row">
+                            <span class="text-light text-center pb-3" style="font-size:22px">ضروری ہدایت: براہ کرم پہلاے تاریخ کا انتخاب  کرے- شکریہ</span>
                             <div class="col-lg-4">
-                                <label>From Date:</label>
+                                <label class="text-white fw-bold">From Date:</label>
                                 <input type="date" id="fromDate"  class="form-control mb-2">
                             </div>
                             <div class="col-lg-4">
-                              <label>To Date:</label>
+                              <label class="text-white fw-bold">To Date:</label>
                               <input type="date" id="toDate" class="form-control mb-2">
                             </div>
                             <div class="col-lg-4">
 
-                                <label>Driver Name:</label>
+                                <label class="text-white fw-bold">Driver Name:</label>
                                 <input type="text" id="searchDriverName" placeholder="Enter driver name" class="form-control mb-2">
 
                             </div>
                             <div class="col-lg-4">
 
-                                <label>Sector Name:</label>
+                                <label class="text-white fw-bold">Sector Name:</label>
                                 <input type="text" id="searchSectorName" placeholder="Enter sector name" class="form-control mb-2">
 
                             </div>
                             <div class="col-lg-4">
 
-                                <label>Veh No:</label>
+                                <label class="text-white fw-bold">Veh No:</label>
                                 <input type="text" id="searchVehNo" placeholder="Enter vehicle no" class="form-control mb-2">
 
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-lg-4 offset-lg-4">
-                              <button class="btn btn-warning w-100" onclick="handleSearch()">Search</button>
+                              <button class="btn btn-primary w-100" onclick="handleSearch()">Search</button>
                             </div>
                           </div>
                           <hr>
                           <div class="col-lg-12" id="showData">
-                            <div class="table-responsive">
-                              <table class="table table-striped">
-                                <thead >
-                                  <tr>
+                            <div class="table-responsive rounded" style="height:380px; overflow-y:scroll;">
+                              <table class="table table-striped table-hover">
+                                <thead style="position:sticky">
+                                  <tr >
                                     <th>Sr</th>
                                     <th>Date</th>
                                     <th>Driver <br/> Name</th>
@@ -171,13 +172,13 @@
 
                                     <tbody id="show_data_exp">
                                     </tbody>
-                            
+
                               </table>
                             </div>
                           </div>
                         </div>
                         <hr>
-                        <div class="card-footer text-light bg-danger" id="showTotalValues">
+                        <div class="card-footer text-light bg-primary" id="showTotalValues">
 
                         </div>
                     </div>

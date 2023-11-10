@@ -1,3 +1,4 @@
+
 let getValueInput = (id)=>{
     return document.getElementById(id);
 }
@@ -113,6 +114,16 @@ let handleSearch = ()=>{
     let searchDriverName = getValueInput("searchDriverName").value;
     let searchSectorName = getValueInput("searchSectorName").value;
     let searchVehNo = getValueInput("searchVehNo").value;
+    if(fromDate=="")
+    {
+      alert("براہ کرم پہلای تاریخ کا انتخاب لازمی کرے");
+      return;
+    }
+    if(toDate=="")
+    {
+      alert("براہ کرم دوسری تاریخ کا انتخاب لازمی کرےے");
+      return;
+    }
     let sendSearchData = {fromDate,toDate,searchDriverName,searchSectorName,searchVehNo}
 
     $.ajax({
